@@ -16,9 +16,16 @@ window.onload = function() {
     for (let j = 0; j < adj.length; j++) {
       for (let k = 0; k < noun.length; k++) {
         for (let l = 0; l < suffix.length; l++) {
-          console.log(pronoun[i] + adj[j] + noun[k] + suffix[l]);
+          domainname.push(pronoun[i] + adj[j] + noun[k] + suffix[l]);
         }
       }
     }
+  }
+  console.log(domainname);
+
+  let html_element = document.querySelector("#web_display");
+
+  for (let i = 0; i < domainname.length; i++) {
+    html_element.innerHTML += "<li>" + domainname[i] + "</li>";
   }
 };
